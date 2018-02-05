@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'SF';
+    src: url('../f/SFR.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SF';
+    src: url('../f/SFB.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OSC';
+    src: url('../f/OSC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HNC';
+    src: url('../f/HNC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	user-select: none;
+	-webkit-user-select: none;
+}
+#top_bar {
+	margin: 0;
+	height: 65px;
+	width: 100%;
+	background-color: #3071B5;
+}
+	#top_bar #burger {
+		float: left;
+		height: 15px;
+		width: 25px;
+		background-image: url(../g/burger-an.png);
+		background-size: 25px 15px;
+		margin-top: 30px;
+		margin-left: 4%;
+	}
+	#top_bar #title {
+		color: white;
+		display: inline-block;
+		width: 150px;
+		font-size: 22px;
+		margin-top: 25px;
+		margin-left: 3%;
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+		font-weight: bold;
+	}
+	#top_bar #share {
+		float: right;
+		height: 22px;
+		position: absolute;
+		background-image: url(../g/share-an.png);
+		width: 6px;
+		background-size: 6px 22px;
+		margin-left: 90%;
+		margin-top: 43px;
+		opacity: 0.9;
+
+	}
+#main_container {
+	background-color: #313131;
+	padding: 10px;
+	height: 100%;
+}
+
+#paper {
+	background-color: white;
+	padding: 20px;ground-size: 25px 35px;
+}
+	#paper #top_text {
+		color: #293742;
+		line-height: 24px;
+		margin-top: 10px;
+		text-align: center;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: bold;
+		font-size: 22px;
+		margin-bottom: 10px;
+		line-height: 40px;
+	}
+	#paper #timebar {
+
+	}
+		#paper #timebar #loading_bar{
+			width: 176px;
+			height: 30px;
+			background: url(../g/bar.png);
+			-webkit-animation-name: test;
+			-webkit-animation-duration: 4s;
+			animation-name: example;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			background-position: -0px 0px;
+			animation-timing-function: linear;
+			display: inline-block;
+			margin-right: 3px;
+			margin-left: -20px;
+		}
+		@-webkit-keyframes example {
+			from {
+				background-position: 0px 0px;
+			}
+			to {
+				background-position: -176px 0px;
+			}
+		}
+		@keyframes example {
+			from {
+				background-position: 0px 0px;
+			}
+			to {
+				background-position: -176px 0px;
+			}
+		}
+
+		#paper #timebar #timer {
+			font-family: 'Roboto Condensed', sans-serif;
+			font-weight: bold;
+			color: #97AC35;
+			font-size: 38px;
+		}
+	#paper #reciept {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: bold;
+		color: #293742;
+		margin-bottom: 20px;
+		margin-top: 20px;
+		font-size: 22px;
+	}
+		#paper #reciept .reciept_left {
+
+		}
+		#paper #reciept .reciept_right {
+			float: right;
+		}
+		#paper #reciept .reciept_line {
+			height: 1px;
+			background-color: black;
+			margin-bottom: 2px;
+		}
+		#paper #reciept .reciept_line.last-item {
+		}
+	#paper #ticket_icon {
+		float: right;
+		position: relative;	
+		width: 110px;
+		text-align: center;
+	}
+		#paper #ticket_icon #bus_img {
+			height: 110px;
+			width: 110px;
+			background-image: url(../g/bus-an.png);
+			background-size: 110px 110px;
+		}
+		#paper #ticket_icon #type {
+			font-family: 'Roboto Condensed', sans-serif;
+			font-weight: bold;
+			color: #293742;
+			display: block;
+			margin-top: 30px;
+		}
+	#paper .body_text {
+		font-family: Helvetica;
+		color: #4D4D4D;
+		font-size: 14px;
+	}
+	#paper #logo {
+		display: inline-block;
+		margin-top: 30px;
+		height: 40px;
+		width: 160px;
+		background-image: url(../g/logo.png);
+		background-size: 160px 40px;
+	}
+h1 {
+  text-align: center;
+  color: #3d3d3d;
+  font-family: "Helvetica";
+  font-weight: 700;
+  font-size: 5em;
+}

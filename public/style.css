@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: rgb(84,29,28);
+	font-family: sans-serif;
+	color: rgb(180, 180, 180);
+	font-size: 1em;
+	line-height: 2em;
+}
+
+#wrapper {
+	width: 96%;	
+	max-width: 400px;
+	margin: auto;
+	padding: 2%;
+}
+#logo {
+	background-image: url("logo.png");
+	margin-top: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 91px;
+	height: 143px;
+}
+div.main {
+	text-align: center;
+	background-color: rgba(28,28,28,0.5);
+	margin-top: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	padding: 2em;
+	border-radius: 0.5em;
+}
+a:link {
+	color: rgb(180, 180, 180);
+}
+a:visited {
+	color: rgb(180, 180, 180);
+}
+a:hover {
+	color: rgb(120,120,120);
+}
+a:active {
+	color: rgb(120,120,120);
+}
+
