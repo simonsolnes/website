@@ -677,3 +677,17 @@ Traceback (most recent call last):
   File "/home/simon/www/httplayer.py", line 38, in __init__
     self.met, self.arg, self.http_version = self.req[0].split(' ')
 ValueError: not enough values to unpack (expected 3, got 1)
+ERROR:__main__:name 'fucked_up' is not defined
+Traceback (most recent call last):
+  File "./staticserver.py", line 20, in run
+    res = self.fufill_request(req)
+  File "./staticserver.py", line 65, in fufill_request
+    return fucked_up()
+NameError: name 'fucked_up' is not defined
+ERROR:__main__:not enough values to unpack (expected 3, got 1)
+Traceback (most recent call last):
+  File "./staticserver.py", line 19, in run
+    req = http.RequestHandler(raw_req)
+  File "/home/simon/www/httplayer.py", line 38, in __init__
+    self.met, self.arg, self.http_version = self.req[0].split(' ')
+ValueError: not enough values to unpack (expected 3, got 1)
