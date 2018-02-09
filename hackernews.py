@@ -4,6 +4,7 @@ import bs4
 import re
 from pprint import pprint
 import requests
+import threading
 
 head = '''<!doctype html>
 <html lang="en">
@@ -120,15 +121,38 @@ def write_html(hn):
 	ret = '\n'.join(ret).encode('utf-8')
 	return ret
 
-	
+class Dthread(threading.Thread):
+	def __init__(self, pages, thid, url):
+		threading.Thread.__init__(self)
+		self.pages = pages
+		self.id = thid
+		self.url = url
+	def run(self):
+		print("Starting", self.id)
+		self.pages.append(requests.get(self.url).content)
+		print("Exiting", self.id)
 			
 
 def getbody(download = True):
 	if download:
 		hn = []
-		for i in range(1):
-			doc = requests.get('https://news.ycombinator.com/news?p=' + str(i)).content
-			hn += parse_html(doc)
+		pages = []
+		threads = []
+		for i in range(1, 5):
+			threads.append(Dthread(pages, i, 'https://news.ycombinator.com/news?p=' + str(i)))
+		for thread in threads:
+			thread.start()
+		for thread in threads:
+			thread.join()
+		for i, page in enumerate(pages):
+			print('parsing', i)
+			try:
+				hn.append(parse_html(page))
+				print('sucess')
+			except:
+				print('error')
+				print(page)
+		hn = [j for i in hn for j in i]
 	else:
 		path = open('tmp/index.html', 'rb')
 		doc = path.read()
@@ -137,7 +161,7 @@ def getbody(download = True):
 	return write_html(hn)
 
 def test():
-	print(getbody(False))
+	print(getbody())
 
 
 if __name__ == '__main__':
