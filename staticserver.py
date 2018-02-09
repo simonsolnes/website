@@ -16,7 +16,7 @@ class StaticServer():
 	def run(self):
 		while True:
 			con, raw_req = http.recv(self.s)
-			debug = True
+			debug = False
 			if debug:
 				req = http.RequestHandler(raw_req)
 				res = self.fufill_request(req)
@@ -74,7 +74,7 @@ class StaticServer():
 			else:
 				return http.ResponseGenerator('OK', body = body)
 		else:
-			return fucked_up()
+			return http.fucked_up()
 
 if __name__ == "__main__":
 	staticserver = StaticServer(debug = True)
